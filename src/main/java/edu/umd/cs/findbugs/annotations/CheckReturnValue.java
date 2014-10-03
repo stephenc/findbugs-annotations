@@ -35,12 +35,22 @@ import static java.lang.annotation.RetentionPolicy.CLASS;
 @Target(value = {METHOD, CONSTRUCTOR})
 @Retention(value = CLASS)
 public @interface CheckReturnValue {
+
     /**
      * The priority of the warning.
      *
      * @return The priority of the warning.
+     * @deprecated use {@link #confidence()} instead
      */
+    @Deprecated
     Priority priority() default Priority.MEDIUM;
+
+    /**
+     * The confidence of the warning.
+     *
+     * @return The confidence of the warning.
+     */
+    Confidence confidence() default Confidence.MEDIUM;
 
     /**
      * A textual explaination of why the return value should be checked.

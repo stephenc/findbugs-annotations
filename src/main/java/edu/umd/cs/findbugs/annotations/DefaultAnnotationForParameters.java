@@ -45,6 +45,15 @@ public @interface DefaultAnnotationForParameters {
      * Default priority.
      *
      * @return Default priority.
+     * @deprecated use {@link #confidence()} instead
      */
+    @Deprecated
     Priority priority() default Priority.MEDIUM;
+
+    /**
+     * Default confidence.
+     *
+     * @return Default confidence.
+     */
+    Confidence confidence() default Confidence.MEDIUM;
 }

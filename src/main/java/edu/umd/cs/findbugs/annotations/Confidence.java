@@ -19,22 +19,21 @@ package edu.umd.cs.findbugs.annotations;
 */
 
 /**
- * @deprecated use {@link Confidence} instead
+ * Describes the confidence with which FindBugs reports a bug instance.
  */
-@Deprecated
-public enum Priority {
+public enum Confidence {
     HIGH(1),
     MEDIUM(2),
     LOW(3),
     IGNORE(5);
 
-    private final int priorityValue;
+    private final int confidenceValue;
 
-    Priority(int priorityValue) {
-        this.priorityValue = priorityValue;
+    Confidence(int confidenceValue) {
+        this.confidenceValue = confidenceValue;
     }
 
-    public int getPriorityValue() {
-        return priorityValue;
+    public int getConfidenceValue() {
+        return confidenceValue;
     }
 }
