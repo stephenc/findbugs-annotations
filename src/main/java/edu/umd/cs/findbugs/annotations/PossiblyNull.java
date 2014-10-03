@@ -35,13 +35,12 @@ import static javax.annotation.meta.When.MAYBE;
  * The annotated element might be null, and uses of the element should check for null. When this annotation is
  * applied to a method it applies to the method return value.
  *
- * @deprecated use CheckForNull instead; the name of which more clearly indicates that not only could the value be
- *             null, but that good coding practice requires that the value be checked for null.
+ * @deprecated use {@link CheckForNull} instead
  */
 @Documented
 @Target(value = {FIELD, METHOD, PARAMETER, LOCAL_VARIABLE})
 @Retention(value = CLASS)
-@Nonnull(when = MAYBE)
+@javax.annotation.Nonnull(when = MAYBE)
 @TypeQualifierNickname
 @Deprecated
 public @interface PossiblyNull {

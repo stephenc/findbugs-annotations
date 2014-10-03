@@ -37,7 +37,8 @@ import static javax.annotation.meta.When.UNKNOWN;
 @Documented
 @Target(value = {FIELD, METHOD, PARAMETER, LOCAL_VARIABLE})
 @Retention(value = CLASS)
-@Nonnull(when = UNKNOWN)
+@javax.annotation.Nonnull(when = UNKNOWN)
 @TypeQualifierNickname
+@Deprecated
 public @interface UnknownNullness {
 }

@@ -27,5 +27,26 @@ import static java.lang.annotation.RetentionPolicy.CLASS;
  */
 @Retention(value = CLASS)
 public @interface NoWarning {
+    
+    /**
+     * The value indicates the bug code (e.g., NP) or bug pattern (e.g., IL_INFINITE_LOOP) 
+     * that should not be reported.
+     */
     String value();
+
+    /**
+     * Want no warning at this priority or higher
+     */
+    Confidence confidence() default Confidence.LOW;
+
+    /**
+     * Expect no warning at this rank or scarier
+     */
+    int rank() default 20;
+
+    /**
+     * Tolerate up to this many warnings
+     */
+    int num() default 0;
+    
 }

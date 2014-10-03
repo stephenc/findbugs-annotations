@@ -27,5 +27,21 @@ import static java.lang.annotation.RetentionPolicy.CLASS;
  */
 @Retention(value = CLASS)
 public @interface DesireWarning {
+
+    /**
+     * The value indicates the bug code (e.g., NP) or bug pattern (e.g., IL_INFINITE_LOOP)
+     * of the desired warning
+     */
     String value();
+
+    /**
+     * Want a warning at this priority or higher
+     */
+    Confidence confidence() default Confidence.LOW;
+
+    /**
+     * Expect a warning at least this scary
+     */
+    int rank() default 20;
+
 }

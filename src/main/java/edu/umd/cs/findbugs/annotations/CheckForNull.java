@@ -38,7 +38,8 @@ import static javax.annotation.meta.When.MAYBE;
 @Documented
 @Target(value = {FIELD, METHOD, PARAMETER, LOCAL_VARIABLE})
 @Retention(value = CLASS)
-@Nonnull(when = MAYBE)
+@javax.annotation.Nonnull(when = MAYBE)
 @TypeQualifierNickname
+@Deprecated
 public @interface CheckForNull {
 }
