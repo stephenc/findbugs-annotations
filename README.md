@@ -24,5 +24,5 @@ a "derivative work" (which is f*cking nuts because you should be
 able to just swap in this version now shouldn't you)
 
 So, if you have some idiot lawyers who won't let you use Findbugs'
-annotations.jar, then side-step them and use this one and keep the bugs]
+annotations.jar, then side-step them and use this one and keep the bugs
 out of your code.
