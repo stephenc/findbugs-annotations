@@ -26,8 +26,7 @@ import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
- * This annotation is used to denote a method whose return value should always be checked when invoking the method.
- * The checker treats this annotation as inherited by overriding methods.
+ * Mark a class or interface as a resource type requiring cleanup.
  */
 @Documented
 @Retention(value = RUNTIME)

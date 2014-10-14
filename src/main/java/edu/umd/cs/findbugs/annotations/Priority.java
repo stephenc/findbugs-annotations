@@ -18,6 +18,10 @@ package edu.umd.cs.findbugs.annotations;
 * under the License.
 */
 
+/**
+ * @deprecated use {@link Confidence} instead
+ */
+@Deprecated
 public enum Priority {
     HIGH(1),
     MEDIUM(2),

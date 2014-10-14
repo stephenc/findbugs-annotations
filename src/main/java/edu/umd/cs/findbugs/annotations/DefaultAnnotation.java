@@ -32,10 +32,13 @@ import static java.lang.annotation.RetentionPolicy.CLASS;
  * annotation class. This would be used for behavior annotations such as @NonNull, @CheckForNull,
  * or @CheckReturnValue. In particular, you can use @DefaultAnnotation(NonNull.class) on a class or package,
  * and then use @Nullable only on those parameters, methods or fields that you want to allow to be null.
+ *
+ * @deprecated use the JSR305 annotations instead
  */
 @Documented
 @Target(value = {TYPE, PACKAGE})
 @Retention(value = CLASS)
+@Deprecated
 public @interface DefaultAnnotation {
     /**
      * Annotation class objects. More than one class can be specified.
@@ -48,6 +51,16 @@ public @interface DefaultAnnotation {
      * Default priority.
      *
      * @return Default priority.
+     * @deprecated use {@link #confidence()} instead
      */
+    @Deprecated
     Priority priority() default Priority.MEDIUM;
+
+    /**
+     * Default confidence.
+     *
+     * @return Default confidence.
+     */
+    Confidence confidence() default Confidence.MEDIUM;
+
 }

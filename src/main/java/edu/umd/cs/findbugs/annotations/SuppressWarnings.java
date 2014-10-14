@@ -37,12 +37,17 @@ import static java.lang.annotation.RetentionPolicy.CLASS;
  * free to emit a warning if an annotation contains an unrecognized warning name.
  * Compiler vendors should document the warning names they support in conjunction with this annotation type. They
  * are encouraged to cooperate to ensure that the same names work across multiple compilers.
+ *
+ * @deprecated use {@link SuppressFBWarnings} instead
  */
 @Target(value = {TYPE, FIELD, METHOD, PARAMETER, CONSTRUCTOR, LOCAL_VARIABLE, PACKAGE})
 @Retention(value = CLASS)
+@Deprecated
 public @interface SuppressWarnings {
+
     /**
-     * The name of the warning. More than one name can be specified.
+     * The set of FindBugs warnings that are to be suppressed by the compiler
+     * in the annotated element.
      *
      * @return The name of the warning. More than one name can be specified.
      */

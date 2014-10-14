@@ -27,5 +27,26 @@ import static java.lang.annotation.RetentionPolicy.CLASS;
  */
 @Retention(value = CLASS)
 public @interface ExpectWarning {
+
+    /**
+     * The value indicates the bug code (e.g., NP) or bug pattern (e.g., IL_INFINITE_LOOP) 
+     * of the expected warning. Can be a comma-separated list.
+     */
     String value();
+
+    /**
+     * Want a warning at this priority or higher
+     */
+    Confidence confidence() default Confidence.LOW;
+
+    /**
+     * Expect a warning at least this scary
+     */
+    int rank() default 20;
+
+    /**
+     * Expect at least this many warnings
+     */
+    int num() default 1;
+
 }

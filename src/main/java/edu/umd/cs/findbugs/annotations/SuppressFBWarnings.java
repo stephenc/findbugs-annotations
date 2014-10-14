@@ -18,30 +18,25 @@ package edu.umd.cs.findbugs.annotations;
 * under the License.
 */
 
-import javax.annotation.Nonnull;
-import javax.annotation.meta.TypeQualifierNickname;
-import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
-import java.lang.annotation.Target;
 
-import static java.lang.annotation.ElementType.FIELD;
-import static java.lang.annotation.ElementType.LOCAL_VARIABLE;
-import static java.lang.annotation.ElementType.METHOD;
-import static java.lang.annotation.ElementType.PARAMETER;
 import static java.lang.annotation.RetentionPolicy.CLASS;
-import static javax.annotation.meta.When.ALWAYS;
 
 /**
- * The annotated element must not be null. Annotated Fields must only not be null after construction has completed.
- * Annotated methods must have non-null return values.
- *
- * @deprecated use {@link javax.annotation.Nonnull} instead
+ * Used to suppress FindBugs warnings. It should be used instead of SuppressWarnings to
+ * avoid conflicts with SuppressWarnings.
  */
-@Documented
-@Target(value = {FIELD, METHOD, PARAMETER, LOCAL_VARIABLE})
 @Retention(value = CLASS)
-@javax.annotation.Nonnull(when = ALWAYS)
-@TypeQualifierNickname
-@Deprecated
-public @interface NonNull {
+public @interface SuppressFBWarnings {
+
+    /**
+     * The set of FindBugs warnings that are to be suppressed in annotated element.
+     * The value can be a bug category, kind or pattern.
+     */
+    String[] value() default {};
+
+    /**
+     * Optional documentation of the reason why the warning is suppressed.
+     */
+    String justification() default "";
 }

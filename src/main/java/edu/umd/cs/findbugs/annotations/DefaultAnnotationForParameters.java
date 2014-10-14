@@ -33,6 +33,7 @@ import static java.lang.annotation.RetentionPolicy.CLASS;
 @Documented
 @Target(value = {TYPE, PACKAGE})
 @Retention(value = CLASS)
+@Deprecated
 public @interface DefaultAnnotationForParameters {
     /**
      * Annotation class objects. More than one class can be specified.
@@ -45,6 +46,15 @@ public @interface DefaultAnnotationForParameters {
      * Default priority.
      *
      * @return Default priority.
+     * @deprecated use {@link #confidence()} instead
      */
+    @Deprecated
     Priority priority() default Priority.MEDIUM;
+
+    /**
+     * Default confidence.
+     *
+     * @return Default confidence.
+     */
+    Confidence confidence() default Confidence.MEDIUM;
 }

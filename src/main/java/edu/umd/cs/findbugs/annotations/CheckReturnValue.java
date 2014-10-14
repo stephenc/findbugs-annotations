@@ -30,17 +30,30 @@ import static java.lang.annotation.RetentionPolicy.CLASS;
 /**
  * This annotation is used to denote a method whose return value should always be checked when invoking the method.
  * The checker treats this annotation as inherited by overriding methods.
+ *
+ * @deprecated use {@link javax.annotation.CheckReturnValue} instead
  */
 @Documented
 @Target(value = {METHOD, CONSTRUCTOR})
 @Retention(value = CLASS)
+@Deprecated
 public @interface CheckReturnValue {
+
     /**
      * The priority of the warning.
      *
      * @return The priority of the warning.
+     * @deprecated use {@link #confidence()} instead
      */
+    @Deprecated
     Priority priority() default Priority.MEDIUM;
+
+    /**
+     * The confidence of the warning.
+     *
+     * @return The confidence of the warning.
+     */
+    Confidence confidence() default Confidence.MEDIUM;
 
     /**
      * A textual explaination of why the return value should be checked.

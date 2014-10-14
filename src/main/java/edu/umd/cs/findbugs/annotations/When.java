@@ -18,6 +18,7 @@ package edu.umd.cs.findbugs.annotations;
 * under the License.
 */
 
+@Deprecated
 public enum When {
     FIRST,
     ANYTIME,

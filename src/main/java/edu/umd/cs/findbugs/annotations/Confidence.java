@@ -18,35 +18,22 @@ package edu.umd.cs.findbugs.annotations;
 * under the License.
 */
 
-import java.lang.annotation.Retention;
-
-import static java.lang.annotation.RetentionPolicy.CLASS;
-
 /**
- * Annotation indicating that <i>no</i> FindBugs warning is expected.
+ * Describes the confidence with which FindBugs reports a bug instance.
  */
-@Retention(value = CLASS)
-public @interface NoWarning {
-    
-    /**
-     * The value indicates the bug code (e.g., NP) or bug pattern (e.g., IL_INFINITE_LOOP) 
-     * that should not be reported.
-     */
-    String value();
+public enum Confidence {
+    HIGH(1),
+    MEDIUM(2),
+    LOW(3),
+    IGNORE(5);
 
-    /**
-     * Want no warning at this priority or higher
-     */
-    Confidence confidence() default Confidence.LOW;
+    private final int confidenceValue;
 
-    /**
-     * Expect no warning at this rank or scarier
-     */
-    int rank() default 20;
+    Confidence(int confidenceValue) {
+        this.confidenceValue = confidenceValue;
+    }
 
-    /**
-     * Tolerate up to this many warnings
-     */
-    int num() default 0;
-    
+    public int getConfidenceValue() {
+        return confidenceValue;
+    }
 }
