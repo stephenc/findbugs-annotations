@@ -27,7 +27,7 @@
 
   <groupId>com.github.stephenc.findbugs</groupId>
   <artifactId>findbugs-annotations</artifactId>
-  <version>3.0.1-nodepr-1-SNAPSHOT</version>
+  <version>3.0.1-nodepr-1</version>
   <name>Findbugs Annotations under Apache License</name>
   <description>A clean room implementation of the Findbugs Annotations based entirely on the specification provided
     by the javadocs and at http://findbugs.sourceforge.net/manual/annotations.html.
@@ -39,6 +39,7 @@
     <connection>scm:git:git://github.com/stephenc/findbugs-annotations.git</connection>
     <developerConnection>scm:git:git@github.com:stephenc/findbugs-annotations.git</developerConnection>
     <url>http://github.com/stephenc/findbugs-annotations/tree/master/</url>
+    <tag>findbugs-annotations-3.0.1-nodepr-1</tag>
   </scm>
 
   <licenses>
