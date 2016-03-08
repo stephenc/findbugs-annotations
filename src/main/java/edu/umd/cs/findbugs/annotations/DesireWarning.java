@@ -40,6 +40,11 @@ public @interface DesireWarning {
     Confidence confidence() default Confidence.LOW;
 
     /**
+     * Desire at least this many warnings
+     */
+    int num() default 1;
+
+    /**
      * Expect a warning at least this scary
      */
     int rank() default 20;
