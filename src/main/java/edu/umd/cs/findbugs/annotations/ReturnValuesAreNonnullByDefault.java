@@ -38,6 +38,5 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Nonnull
 @TypeQualifierDefault(value = METHOD)
 @Retention(value = RUNTIME)
-@Deprecated
 public @interface ReturnValuesAreNonnullByDefault {
 }

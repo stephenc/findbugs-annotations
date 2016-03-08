@@ -39,6 +39,5 @@ import static javax.annotation.meta.When.UNKNOWN;
 @Retention(value = CLASS)
 @javax.annotation.Nonnull(when = UNKNOWN)
 @TypeQualifierNickname
-@Deprecated
 public @interface UnknownNullness {
 }

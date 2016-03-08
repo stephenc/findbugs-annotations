@@ -30,13 +30,10 @@ import static java.lang.annotation.RetentionPolicy.CLASS;
  * overriding method. Examples of such methods include finalize() and clone(). The argument to the method indicates
  * when the super invocation should occur: at any time, at the beginning of the overriding method,
  * or at the end of the overriding method.
- *
- * @deprecated use {@link javax.annotation.OverridingMethodsMustInvokeSuport} instead
  */
 @Documented
 @Target(value = METHOD)
 @Retention(value = CLASS)
-@Deprecated
 public @interface OverrideMustInvoke {
 
     When value() default When.ANYTIME;

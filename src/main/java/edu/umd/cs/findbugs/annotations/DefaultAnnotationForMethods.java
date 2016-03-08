@@ -33,7 +33,6 @@ import static java.lang.annotation.RetentionPolicy.CLASS;
 @Documented
 @Target(value = {TYPE, PACKAGE})
 @Retention(value = CLASS)
-@Deprecated
 public @interface DefaultAnnotationForMethods {
     /**
      * Annotation class objects. More than one class can be specified.

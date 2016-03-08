@@ -35,14 +35,11 @@ import static javax.annotation.meta.When.UNKNOWN;
  * The annotated element could be null under some circumstances. In general, this means developers will have to read
  * the documentation to determine when a null value is acceptable and whether it is neccessary to check for a null
  * value. When this annotation is applied to a method it applies to the method return value.
- *
- * @deprecated use {@link javax.annotation.Nullable} instead
  */
 @Documented
 @Target(value = {FIELD, METHOD, PARAMETER, LOCAL_VARIABLE})
 @Retention(value = CLASS)
 @javax.annotation.Nonnull(when = UNKNOWN)
 @TypeQualifierNickname
-@Deprecated
 public @interface Nullable {
 }

@@ -40,6 +40,5 @@ import static javax.annotation.meta.When.MAYBE;
 @Retention(value = CLASS)
 @javax.annotation.Nonnull(when = MAYBE)
 @TypeQualifierNickname
-@Deprecated
 public @interface CheckForNull {
 }

@@ -27,7 +27,7 @@
 
   <groupId>com.github.stephenc.findbugs</groupId>
   <artifactId>findbugs-annotations</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.1-nodeprecation-SNAPSHOT</version>
   <name>Findbugs Annotations under Apache License</name>
   <description>A clean room implementation of the Findbugs Annotations based entirely on the specification provided
     by the javadocs and at http://findbugs.sourceforge.net/manual/annotations.html.

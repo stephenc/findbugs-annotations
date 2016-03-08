@@ -34,14 +34,11 @@ import static javax.annotation.meta.When.ALWAYS;
 /**
  * The annotated element must not be null. Annotated Fields must only not be null after construction has completed.
  * Annotated methods must have non-null return values.
- *
- * @deprecated use {@link javax.annotation.Nonnull} instead
  */
 @Documented
 @Target(value = {FIELD, METHOD, PARAMETER, LOCAL_VARIABLE})
 @Retention(value = CLASS)
 @javax.annotation.Nonnull(when = ALWAYS)
 @TypeQualifierNickname
-@Deprecated
 public @interface NonNull {
 }
